@@ -1,19 +1,10 @@
 {
   "type": "module",
   "scripts": {
-    "dev": "browser-sync start --server --files **/* --no-open"
-  },
-  "dependencies": {
-    "@siteimprove/alfa-act": "^0.97.0",
-    "@siteimprove/alfa-aria": "^0.97.0",
-    "@siteimprove/alfa-dom": "^0.97.0",
-    "@siteimprove/alfa-json": "^0.97.0",
-    "@siteimprove/alfa-rules": "^0.97.0",
-    "@siteimprove/alfa-style": "^0.97.0",
-    "@siteimprove/alfa-web": "^0.97.0"
+    "dev": "http-server"
   },
   "devDependencies": {
-    "browser-sync": "^3.0.3",
+    "http-server": "^14.1.1",
     "prettier": "^3.4.2",
     "typescript": "^5.7.2"
   }
