@@ -1,5 +1,3 @@
-import { AlfaDevTools } from "./alfa-dev-tools.js";
-
 import * as act from "@siteimprove/alfa-act";
 import * as aria from "@siteimprove/alfa-aria";
 import * as dom from "@siteimprove/alfa-dom";
@@ -7,6 +5,8 @@ import * as rules from "@siteimprove/alfa-rules";
 import * as web from "@siteimprove/alfa-web";
 import * as sequence from "@siteimprove/alfa-sequence";
 import * as style from "@siteimprove/alfa-style";
+
+import * as utils from "./utils.js";
 
 const storedPageJson = localStorage.getItem("page.json");
 
@@ -31,7 +31,7 @@ function init() {
     style,
   };
 
-  window.alfaDT = new AlfaDevTools(document.getElementById("page").value);
+  window.utils = utils;
 }
 
 init();
@@ -42,5 +42,5 @@ window.addEventListener("beforeunload", () => {
 });
 
 console.log(
-  "Welcome to Alfa in DevTools! Get started by inspecting the global \`alfa\` and \`alfaDT\` instances.",
+  "Welcome to Alfa in DevTools! Get started by inspecting the global \`alfa\` and \`utils\` instances.",
 );
